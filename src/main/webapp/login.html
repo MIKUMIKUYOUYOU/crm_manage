@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base href="/crm_manage/">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>用户登陆</title>
+<meta name="description" content="" />
+<meta name="viewport"
+	content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/google-fonts.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/isotope.css" rel="stylesheet">
+<link rel="stylesheet" href="js/layer/theme/default/layer.css">
+<link href="css/bootstrap-validator/bootstrapValidator.css"
+	rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+	<div class="form_login">
+		<div class="form_logo">
+			<h1>CRM</h1>
+		</div>
+		<form method="post" id="formlogin">
+			<div class="form-group">
+				<i class="fa fa-user"></i> <input type="text" class="form-control"
+					name="EMPLOYEE_ID" id="employeeId" placeholder="输入工号">
+			</div>
+			<div class="form-group">
+				<i class="fa fa-key"></i> <input type="password"
+					class="form-control" name="EMP_PASSWORD" id="password"
+					placeholder="输入密码">
+			</div>
+			<!--  <div class="form-group" style="height:25px; line-height:25px; text-align:left;">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <span class="checkfont">记住我的帐号</span>
+        </div> -->
+			<div class="form-group">
+				<button type="button" id="loginsubmit"
+					class="btn btn-primary btn-block btn-login" onclick="login()">登录</button>
+			</div>
+		</form>
+		<div class="form_footer">
+			<h4>@2017 江苏万和系统工程有限公司</h4>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<!-- bootstrap -->
+	<script type="text/javascript" src="js/bootstrap-3.3.4.js"></script>
+	<script src="js/angular.min.js"></script>
+	<!-- 表单验证 -->
+	<script type="text/javascript"
+		src="js/bootstrap-validator/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="js/bootstrap-validator/zh_CN.js"></script>
+	<!-- 弹出层 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 分页插件 -->
+	<script type="text/javascript" src="js/jqPaginator.js"></script>
+	<!-- 自定义js -->
+	<script type="text/javascript" src="js/commonUpdateByES6.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base href="/crm_manage/">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>南京万和CMS</title>
+<meta name="description" content="" />
+<meta name="viewport"
+	content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/google-fonts.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/isotope.css" rel="stylesheet">
+<link rel="stylesheet" href="js/layer/theme/default/layer.css">
+<link href="css/bootstrap-validator/bootstrapValidator.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- 自定义样式 -->
+<link href="page/systemSettings/employee/css/manage.css" rel="stylesheet">
+
+</head>
+
+<body class="navbar-top">
+	<!-- 头部菜单 -->
+	<div id='menu'></div>
+	<div class="modal-shiftfix" id='table' style='display: block'>
+		<div class="container-fluid main-content">
+			<div class="widget-container fluid-height clearfix"
+				style="border-radius: 20px; box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.2);">
+				<div class="heading clearfix" style="border-radius: 20px;">
+					<i class="icon-table"></i> 员工管理
+					<button class="btn btn-sm btn-primary pull-right"
+						onclick="addAndUpdate(table,addEmployee,'add')">
+						<i class="icon-plus"></i> 添加员工
+					</button>
+				</div>
+				<div class="widget-content padded clearfix">
+					<div class="dataTables_filter">
+						<form id='paramForm' class="form-inline" method="post">
+							<div class="btn-group">
+								<span>工号：</span> <input type="text" class="form-control"
+									id="emmployeeId" name="EMPLOYEE_ID" value="">
+							</div>
+							<div class="btn-group">
+								<span>姓名：</span> <input type="text" class="form-control"
+									id="emmployeename" name="EMPLOYEE_NAME" value="">
+							</div>
+							<div class="btn-group">
+								<button id='queryBtn' type="button" class="btn btn-success">
+									<i class="glyphicon glyphicon-search"></i> 搜索
+								</button>
+							</div>
+						</form>
+					</div>
+					<div id="w0" class="grid-view">
+						<div class="table-responsive">
+							<table class="table table-hover" id='employeeTable'>
+								<thead>
+									<tr>
+										<th nowrap>工号</th>
+										<th nowrap>姓名</th>
+										<th nowrap>部门</th>
+										<th nowrap>职位</th>
+										<th nowrap>手机</th>
+										<th nowrap>电子邮箱</th>
+										<th nowrap>状态</th>
+										<th nowrap>创建时间</th>
+										<th nowrap>更新时间</th>
+										<th class="action-column">操作</th>
+									</tr>
+								</thead>
+								<!--我是一个假tbody A.A -->
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='addEmployee' style="display: none">
+		<div class="container-fluid main-content">
+			<div class="widget-container fluid-height clearfix mwi1200"
+				style="border-radius: 20px; box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.2);">
+				<div class="heading clearfix" style="border-radius: 20px;">
+					<i class="icon-reorder"></i> <span id="msg"></span> <a href="javascript:;"
+						class="pull-right" onclick="back(addEmployee,table)"><i
+						class="icon-reply"></i> </a>
+				</div>
+				<div class="widget-content padded clearfix"><!-- onsubmit="return submitEmployee() -->
+					<form id="employeeForm" class="form-horizontal" method="post" >
+						<div class="form-group">
+							<label class="control-label col-md-2">工号</label>
+							<div class="col-md-8">
+								<input type="text" class="form-control" name="EMPLOYEE_ID"
+									id="EMPLOYEE_ID" value="工号自动生成无需手动填写" readonly
+									disabled="disabled">
+							</div>
+						</div>
+						<div class="form-group field-manage-name required">
+							<label class="control-label col-sm-2">姓名</label>
+							<div class="col-sm-8">
+								<input type="text" id="EMPLOYEE_NAME" class="form-control"
+									name="EMPLOYEE_NAME" placeholder="姓名">
+							</div>
+							<div class="help-block help-block-error"></div>
+						</div>
+
+						<div class="form-group field-manage-password required" id="passwordBlock" style="display:block">
+							<label class="control-label col-sm-2">密码</label>
+							<div class="col-sm-8">
+								<input type="password" id="EMP_PASSWORD" class="form-control"
+									name="EMP_PASSWORD" placeholder="123456(初始化密码，修改后才能登陆)"
+									readonly>
+							</div>
+							<div class="help-block help-block-error"></div>
+						</div>
+
+						<div class="form-group field-manage-department_id required">
+							<label class="control-label col-sm-2">部门</label>
+							<div class="col-sm-8">
+								<select id="DEPARTMENT" class="form-control"
+									name="DEPARTMENT_ID">
+									<option value="0">选择部门</option>
+								</select>
+							</div>
+							<div class="help-block help-block-error"></div>
+						</div>
+
+						<div class="form-group field-manage-position_id required">
+							<label class="control-label col-sm-2">职位</label>
+							<div class="col-sm-8">
+								<select id="POSITION" class="form-control" name="POSITION_ID">
+									<option value="0">选择职位</option>
+								</select>
+							</div>
+							<div class="help-block help-block-error"></div>
+						</div>
+
+						<div class="form-group field-manage-mobile required">
+							<label class="control-label col-sm-2">手机</label>
+							<div class="col-sm-8">
+								<input type="text" id="PHONE" class="form-control" name="PHONE"
+									placeholder="手机">
+							</div>
+							<div class="help-block help-block-error"></div>
+						</div>
+
+						<div class="form-group field-manage-email">
+							<label class="control-label col-sm-2">电子邮箱</label>
+							<div class="col-sm-8">
+								<input type="text" id="EMAIL" class="form-control" name="EMAIL"
+									placeholder="电子邮箱">
+							</div>
+							<div class="help-block help-block-error"></div>
+						</div>
+
+						<div class="form-group field-manage-parentemployeeId">
+							<label class="control-label col-sm-2">上级员工工号</label>
+							<div class="col-sm-8">
+								<input type="text" id="PARENT_EMPLOYEE" class="form-control"
+									name="PARENT_EMPLOYEE_ID" placeholder="上级员工工号">
+							</div>
+							<div class="help-block help-block-error"></div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label"></label>
+							<div class="col-lg-10">
+								<button id="mysubmit" type="submit" class="btn btn-success"></button>
+								<button type="button" class="btn btn-default"
+									onClick="back(addEmployee,table)">返回</button>
+								<!-- <input type="hidden" name="reback"> -->
+							</div>
+						</div>
+						<div>
+							<input style="display:none" type="text" name="Method" id="method" value="">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 0px auto;text-align: center" id="pageList">
+			<ul class="pagination "></ul>
+		</div>
+	<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<!-- bootstrap -->
+	<script type="text/javascript" src="js/bootstrap-3.3.4.js"></script>
+	<script src="js/angular.min.js"></script>
+	<!-- 表单验证 -->
+	<script type="text/javascript" src="js/bootstrap-validator/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="js/bootstrap-validator/zh_CN.js"></script>
+	<!-- 弹出层 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 分页插件 -->
+	<script type="text/javascript" src="js/jqPaginator.js"></script>
+	<!-- 自定义js -->
+	<script type="text/javascript" src="js/commonUpdateByES6.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="page/systemSettings/employee/js/table.js"></script>
+	<script type="text/javascript" src="page/systemSettings/employee/js/employeeManage.js"></script>
+	<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<![endif]-->
+	<!--[if lt IE 9]>
+<script src="/js/excanvas.min.js"></script>
+<![endif]-->
+	<script type="text/javascript">
+		//导入menu导航栏
+		$("#menu").load("/" + location.pathname.split("/")[1] + "/menu.html");
+	</script>
+</body>
+
+</html>

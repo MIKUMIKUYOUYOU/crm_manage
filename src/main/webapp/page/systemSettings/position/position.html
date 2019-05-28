@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base href="/crm_manage/">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>南京万和CMS</title>
+<meta name="description" content="" />
+<meta name="viewport"
+	content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/google-fonts.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/isotope.css" rel="stylesheet">
+<link rel="stylesheet" href="js/layer/theme/default/layer.css">
+<link href="css/bootstrap-validator/bootstrapValidator.css"
+	rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- ztree css -->
+<link href="js/jquery-ztree/3.5/css/metro/zTreeStyle.css" rel="stylesheet">
+<!-- 自定义样式 -->
+<link rel="stylesheet"
+	href="page/systemSettings/position/css/position.css">
+</head>
+<body class="navbar-top">
+	<!-- 头部菜单 -->
+	<div id='menu'></div>
+	<div class="modal-shiftfix" id='table' style='display: block'>
+		<div class="container-fluid main-content">
+			<div class="widget-container fluid-height clearfix"
+				style="border-radius: 20px; box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.2);">
+				<div class="heading clearfix" style="border-radius: 20px;">
+					<i class="icon-table"></i> 职位设置
+					<button onclick="addAndUpdate(table,addPosition,'add')"
+						class="btn btn-sm btn-primary pull-right weiBoxs-dialog">
+						<i class="icon-plus"></i> 添加职位
+					</button>
+				</div>
+				<div class="widget-content padded clearfix">
+					<div class="dataTables_filter">
+						<form id='paramForm' class="form-inline" method="post">
+							<div class="btn-group">
+								<span>职位名：</span> <input type="text" class="form-control"
+									id="positionname" name=POSITION_NAME value="">
+							</div>
+							<div class="btn-group">
+								<button id='queryBtn' type="button" class="btn btn-success">
+									<i class="glyphicon glyphicon-search"></i> 搜索
+								</button>
+							</div>
+						</form>
+					</div>
+					<div id="w0" class="grid-view">
+						<div class="table-responsive">
+							<table class="table table-hover" id='positionTable'>
+								<thead>
+									<tr>
+										<th nowrap>ID</th>
+										<th nowrap>等级</th>
+										<th nowrap>名称</th>
+										<th nowrap>创建时间</th>
+										<th nowrap>更新时间</th>
+										<th class="action-column">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+
+								</tbody>
+							</table>
+						</div>
+						<div id="checkedAllMenu" style="height: 10px; display: none"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid main-content" id='addPosition'
+		style='display: none'>
+		<div class="widget-container fluid-height clearfix mwi1200"
+			style="border-radius: 20px; box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.2);">
+			<div class="heading clearfix" style="border-radius: 20px;">
+				<i class="icon-reorder"></i> <span id='msg'></span> <a
+					href="javascript:;" class="pull-right"
+					onclick="back(addPosition,table)"><i class="icon-reply"></i> </a>
+			</div>
+			<div class="widget-content padded clearfix">
+				<form id="positionFrom" class="form-horizontal" method="post">
+					<div class="form-group field-manage-name required">
+						<label class="control-label col-sm-2">名称</label>
+						<div class="col-sm-8">
+							<input type="text" id="POSITION_NAME" class="form-control"
+								name="POSITION_NAME" placeholder="职位名称">
+						</div>
+						<div class="help-block help-block-error"></div>
+					</div>
+
+					<div class="form-group field-manage-department_id required">
+						<label class="control-label col-sm-2">等级</label>
+						<div class="col-sm-8">
+							<select id="POSITION_LEVEL" class="form-control"
+								name="POSITION_LEVEL">
+								<option value="0">选择等级</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+							</select>
+						</div>
+						<div class="help-block help-block-error"></div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label"></label>
+						<div class="col-lg-10">
+							<button id="mysubmit" class="btn btn-success"></button>
+							<button type="button" class="btn btn-default"
+								onClick="back(addPosition,table)">返回</button>
+						</div>
+					</div>
+					<div>
+						<input style="display: none" type="text" name="Method" id="method"
+							value="">
+					</div>
+					<div>
+						<input style="display: none" type="text" name="POSITION_ID"
+							id="POSITION_ID" value="">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div style="margin: 0px auto; text-align: center" id="pageList">
+		<ul class="pagination "></ul>
+	</div>
+
+	<!-- 这边是选择菜单的模态框  begin -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<input type="hidden" id="referencepositionId"
+						name="referencepositionId">
+					<h4 class="modal-title" id="myModalLabel">选择关联菜单</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<ul id="tree" class="ztree"></ul>
+					</div>
+				</div>
+				<div class="modal-footer" style="text-align: center;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					</button>
+					<button type="button" class="btn btn-primary"
+						onclick="updateEPositionWithMenu()">确认</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 这边是选择菜单的的模态框  end  -->
+
+	<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<!-- bootstrap -->
+	<script type="text/javascript" src="js/bootstrap-3.3.4.js"></script>
+	<script src="js/angular.min.js"></script>
+	<!-- 表单验证 -->
+	<script type="text/javascript"
+		src="js/bootstrap-validator/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="js/bootstrap-validator/zh_CN.js"></script>
+	<!-- 弹出层 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 分页插件 -->
+	<script type="text/javascript" src="js/jqPaginator.js"></script>
+	<!-- ztree js -->
+	<script type="text/javascript"
+		src="js/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js"></script>
+	<!-- 自定义js -->
+	<script type="text/javascript" src="js/commonUpdateByES6.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript"
+		src="page/systemSettings/position/js/table.js"></script>
+	<script type="text/javascript"
+		src="page/systemSettings/position/js/positionManage.js"></script>
+	<script type="text/javascript">
+		//导入menu导航栏 
+		$("#menu").load("/" + location.pathname.split("/")[1] + "/menu.html");
+	</script>
+
+
+
+</body>
+</html>

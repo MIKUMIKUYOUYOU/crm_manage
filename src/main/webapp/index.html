@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="/crm_manage/">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>主页</title>
+<meta name="description" content="" />
+<meta name="viewport"
+	content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/google-fonts.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/isotope.css" rel="stylesheet">
+<link rel="stylesheet" href="js/layer/theme/default/layer.css">
+<link href="css/bootstrap-validator/bootstrapValidator.css"
+	rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="navbar-top">
+	<!-- 头部菜单 -->
+	<div id='menu'></div>
+	<div class="modal-shiftfix">
+		<div class="container-fluid main-content">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="widget-container stats-container">
+						<div class="col-md-3">
+							<div class="number">
+								<div class="icon visitors"></div>
+								<span id="customerCount">1</span> <small>个</small>
+							</div>
+							<div class="text">近七日新增客户</div>
+						</div>
+						<div class="col-md-3">
+							<div class="number">
+								<div class="icon globe"></div>
+								<span id="businessCount">3</span> <small>个</small>
+							</div>
+							<div class="text">近七日新增商机</div>
+						</div>
+						<div class="col-md-3">
+							<div class="number">
+								<div class="icon money"></div>
+								<span id="salesCount">6</span> <small>单</small>
+							</div>
+							<div class="text">近七日新增销售单</div>
+						</div>
+						<div class="col-md-3">
+							<div class="number">
+								<div class="icon chat-bubbles"></div>
+								<span id="customerTotal">6</span>
+
+							</div>
+							<div class="text">月度新增客户</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="widget-container fluid-height">
+						<div class="heading">
+							<i class="icon-bar-chart"></i>本月客户,商机
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th nowrap>来源</th>
+										<th nowrap>名称</th>
+										<th nowrap>负责人</th>
+										<th nowrap>商机来源</th>
+										<th nowrap>更新时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-key="8">
+										<td>阿是</td>
+										<td>个</td>
+										<td>的</td>
+										<td>对比</td>
+										<td>根本</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="widget-content" id="main" style="height: 280px;"></div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="widget-container fluid-height clearfix">
+						<div class="heading">
+							<i class="icon-table"></i>我最近的任务
+						</div>
+						<div class="widget-content padded clearfix">
+							<table class="table" style="color: #007aff;">
+								<thead>
+									<tr>
+										<th>名称</th>
+										<th>状态</th>
+										<th>待完成时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>双方各</td>
+										<td>未启动</td>
+										<td>推迟</td>
+										<td>进行中</td>
+										<td>完成</td>
+										<td>2012-12-18 11:26:38</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<!-- bootstrap -->
+	<script type="text/javascript" src="js/bootstrap-3.3.4.js"></script>
+	<script src="js/angular.min.js"></script>
+	<!-- 表单验证 -->
+	<script type="text/javascript"
+		src="js/bootstrap-validator/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="js/bootstrap-validator/zh_CN.js"></script>
+	<!-- 弹出层 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 分页插件 -->
+	<script type="text/javascript" src="js/jqPaginator.js"></script>
+	<!-- 自定义js -->
+	<script type="text/javascript" src="js/commonUpdateByES6.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript">
+		//导入menu导航栏
+		$("#menu").load("/" + location.pathname.split("/")[1] + "/menu.html");
+	</script>
+</body>
+</html>

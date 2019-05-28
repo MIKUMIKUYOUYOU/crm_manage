@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base href="/crm_manage/">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>南京万和CMS</title>
+<meta name="description" content="" />
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/google-fonts.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/isotope.css" rel="stylesheet">
+<link rel="stylesheet" href="js/layer/theme/default/layer.css">
+<link href="css/bootstrap-validator/bootstrapValidator.css"
+	rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- 自定义样式 -->
+
+</head>
+
+<body class="navbar-top">
+	<!-- 头部菜单 -->
+	<div id='menu'></div>
+	<div class="modal-shiftfix" id='table' style='display: block'>
+		<div class="container-fluid main-content">
+			<div class="widget-container fluid-height clearfix"
+				style="border-radius: 20px; box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.2);">
+				<div class="heading clearfix" style="border-radius: 20px;">
+					<i class="icon-table"></i> 菜单管理
+					
+				</div>
+				<div class="widget-content padded clearfix">
+					<div class="dataTables_filter">
+						<form id='paramForm' class="form-inline" method="post">
+							<div class="btn-group">
+								<span>菜单名：</span> <input type="text" class="form-control"
+									id="menuName" name="MENU_NAME" value="" placeholder="名称">
+							</div>
+							<div class="btn-group">
+								<button id='queryBtn' type="button" class="btn btn-success">
+									<i class="glyphicon glyphicon-search"></i> 搜索
+								</button>
+							</div>
+						</form>
+					</div>
+					<div id="w0" class="grid-view">
+						<div class="table-responsive">
+							<table class="table table-hover" id='menuTable'>
+								<thead>
+									<tr>
+										<th nowrap>ID</th>
+										<th nowrap>名称</th>
+										<th nowrap>地址</th>
+										<th nowrap>图标</th>
+										<th nowrap>创建时间</th>
+										<th nowrap>更新时间</th>
+										<th nowrap>上级菜单</th>
+										<th class="action-column">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 0px auto; text-align: center" id="pageList">
+		<ul class="pagination "></ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<!-- bootstrap -->
+	<script type="text/javascript" src="js/bootstrap-3.3.4.js"></script>
+	<script src="js/angular.min.js"></script>
+	<!-- 表单验证 -->
+	<script type="text/javascript"
+		src="js/bootstrap-validator/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="js/bootstrap-validator/zh_CN.js"></script>
+	<!-- 弹出层 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<!-- 分页插件 -->
+	<script type="text/javascript" src="js/jqPaginator.js"></script>
+	<!-- 自定义js -->
+	<script type="text/javascript" src="js/commonUpdateByES6.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript"src="page/systemSettings/menu/js/table.js"></script>
+	<script type="text/javascript"src="page/systemSettings/menu/js/menu.js"></script>
+	<script type="text/javascript">
+		//导入menu导航栏
+		$("#menu").load("/" + location.pathname.split("/")[1] + "/menu.html");
+	</script>
+</body>
+</html>

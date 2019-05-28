@@ -6,190 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0749b56b-692f-4e25-ac59-166f748effcc" name="Default Changelist" comment="my first crm_manage">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm_manage.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/DepartmentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/EmployeeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/MenuDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/PositionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/PositionMenuRelationsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/impl/DepartmentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/impl/EmployeeDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/impl/MenuDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/impl/PositionDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/dao/impl/PositionMenuRelationsDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/exception/DaoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/exception/DataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/exception/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/filter/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/filter/PermissionFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/PositionMenuRelationsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/PositionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/impl/PositionMenuRelationsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/impl/PositionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/service/proxy/ServiceProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/servlet/CountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/servlet/DepartmentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/servlet/EmployeeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/servlet/MenuServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/servlet/PositionMenuRelationsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/servlet/PositionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/JDBCTemplateUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/JDBCTemplateUpdateTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/JDBCTemplateUpdateTr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/JDBCUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/ObjectFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/PageBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/ServletUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/wanho/util/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bean.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/commons/queryCondition.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-3.3.4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-validator/bootstrapValidator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-validator/bootstrapValidator.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/dataTables.bootstrap-1.10.13.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/google-fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/isotope.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/1ywb1so8ye1lyjf12wniua.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/dpj5r9gl3kk6ijoep1irsvy6323mhuzfjmgtvxag2ie.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/efrpvglew31oiexbynx7y_eszw2xoq-xsnqo47m55da.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/esvmc5un3kjyuhb9zeppwg.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/gtrkrntnri0g82cjkneb0q.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/h2dmvhdlycm56knuatbjya.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/obqr5xycoh0wbouxiayk3_y6323mhuzfjmgtvxag2ie.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/se7en.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/se7en.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/se7en.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/se7en.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/se7end41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/uybmtlshkbkxelqf4x7vrq.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/icon-search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/icon-search@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/info-data-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/info-data-sprite@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/pw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/wanho-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/weiboxs-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/weiboxs-logo@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-3.3.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-validator/bootstrapValidator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-validator/bootstrapValidator.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap-validator/zh_CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/commonUpdateByES6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/dataTables.bootstrap-1.10.13.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jqPaginator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.0.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.4.0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/1_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/1_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/diy/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/line_conn.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/zTreeStandard.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/img/zTreeStandard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/default/zTreeStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/metro/img/line_conn.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/metro/img/line_conn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/metro/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/metro/img/metro.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/metro/img/metro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/metro/zTreeStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/simple/img/left_menu.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/simple/img/left_menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/simple/img/line_conn.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/simple/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/simple/img/zTreeStandard.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/simple/img/zTreeStandard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/css/simple/zTreeStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/js/jquery.ztree.core-3.5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/js/jquery.ztree.excheck-3.5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/js/jquery.ztree.exedit-3.5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/js/jquery.ztree.exhide-3.5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-ztree/3.5/log v3.x.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.dataTables-1.10.13.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/mobile/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/mobile/need/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/theme/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/theme/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/theme/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/theme/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/theme/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/layer/theme/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/menuList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/updatepassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/css/manage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/js/employeeManage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/js/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/js/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/js/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/css/position.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/js/positionManage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/js/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/picture/1_avatar_middle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/picture/2_avatar_middle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/picture/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/picture/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/updatepassword.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestUtil.java" afterDir="false" />
+    <list default="true" id="0749b56b-692f-4e25-ac59-166f748effcc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/updatepassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updatepassword.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -204,11 +31,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-3.3.4.css">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="6374" column="22" lean-forward="true" selection-start-line="6374" selection-start-column="22" selection-end-line="6374" selection-end-column="22" />
+            <state relative-caret-position="82">
+              <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="191" column="52" selection-start-line="191" selection-start-column="52" selection-end-line="191" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="167" column="52" selection-start-line="167" selection-start-column="52" selection-end-line="167" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -224,6 +87,9 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="da478604-8aca-4615-8555-a52ea0f9987f" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -235,15 +101,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/404.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/common.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/js/positionManage.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/commonUpdateByES6.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/updatepassword.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/menu.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/wanho/util/Test.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/page/customerManage/customer/index.jsp" />
@@ -251,6 +110,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/page/customerManage/business/create.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/net/wanho/dao/MenuDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/fonts/se7en.svg" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/updatepassword.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html" />
       </list>
     </option>
   </component>
@@ -320,13 +186,6 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="248" />
     <option name="y" value="37" />
@@ -363,7 +222,102 @@
               <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wanho" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="systemSettings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="systemSettings" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="systemSettings" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="systemSettings" type="462c0819:PsiDirectoryNode" />
+              <item name="position" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="tomcat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="tomcat" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm_manage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm_manage" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="tomcat" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -377,27 +331,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/css" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\target\tomcat\work\Tomcat\localhost\crm_manage" />
-      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\target\tomcat\webapps\ROOT" />
-      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\webapp" />
-      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main" />
-      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\webapp\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\a7188\IdeaProjects\crm_manage\target" />
       <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\webapp" />
       <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\java" />
       <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\webapp\css" />
+      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\webapp\js" />
+      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\target\tomcat\work\Tomcat\localhost\crm_manage" />
+      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\target\tomcat\webapps\ROOT" />
+      <recent name="C:\Users\a7188\IdeaProjects\crm_manage\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -587,12 +541,27 @@
       <workItem from="1558922728990" duration="4238000" />
       <workItem from="1558935574799" duration="1012000" />
       <workItem from="1558936740855" duration="4209000" />
-      <workItem from="1559009548110" duration="1506000" />
+      <workItem from="1559009548110" duration="6074000" />
     </task>
+    <task id="LOCAL-00001" summary="my first crm_manage">
+      <created>1559011201710</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559011201710</updated>
+    </task>
+    <task id="LOCAL-00002" summary="my first crm_manage">
+      <created>1559014446576</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559014446576</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21261000" />
+    <option name="totallyTimeSpent" value="25829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -604,18 +573,18 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.23294243" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.23294243" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50053304" side_tool="true" weight="0.2271715" />
-      <window_info active="true" anchor="bottom" id="Messages" order="2" sideWeight="0.49946696" visible="true" weight="0.2271715" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50053304" side_tool="true" weight="0.30178174" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.49946696" weight="0.2271715" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Terminal" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32925472" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.30178174" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49946696" visible="true" weight="0.30178174" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -691,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://MAVEN/crm_manage:crm_manage:1.0-SNAPSHOT">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -763,48 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/updatepassword.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="72" column="59" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1832">
-          <caret line="134" column="63" selection-start-line="134" selection-start-column="63" selection-end-line="134" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="205" column="21" selection-start-line="205" selection-start-column="21" selection-end-line="205" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="89" column="63" selection-start-line="89" selection-start-column="63" selection-end-line="89" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="181" column="63" selection-start-line="181" selection-start-column="63" selection-end-line="181" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -841,20 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1036">
-          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="94" column="8" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -923,16 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8880" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/commons/common.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -953,10 +849,103 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/fonts/se7en.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/dataTables.bootstrap-1.10.13.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/google-fonts.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/login.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/isotope.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-3.3.4.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="6374" column="22" lean-forward="true" selection-start-line="6374" selection-start-column="22" selection-end-line="6374" selection-end-column="22" />
+        <state relative-caret-position="81">
+          <caret line="6374" column="21" lean-forward="true" selection-start-line="6374" selection-start-column="21" selection-end-line="6374" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/updatepassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2257">
+          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/employee/employee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="191" column="52" selection-start-line="191" selection-start-column="52" selection-end-line="191" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/menu/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/page/systemSettings/position/position.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="167" column="52" selection-start-line="167" selection-start-column="52" selection-end-line="167" selection-end-column="52" />
         </state>
       </provider>
     </entry>

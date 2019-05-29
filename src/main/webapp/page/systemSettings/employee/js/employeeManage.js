@@ -1,14 +1,14 @@
 //填充部门
-var initDepartment = function() {
+let initDepartment = function() {
 	$.ajax({
 		url : "/" + location.pathname.split("/")[1] + "/department",
 		type : "POST",
 		dataType : "JSON",
 		data : 'Method=INIT',
 		success : function(departments) {
-			var $department=$("#DEPARTMENT");
-			for (let department of departments) {
-				$department.append("<option value='"+department.DEPARTMENT_ID+"'>"+department.DEPARTMENT_NAME+"</option>");
+			let $department=$("#DEPARTMENT");
+			for (let index=0;index<departments.length;index++){
+				$department.append("<option value='"+departments[index].DEPARTMENT_ID+"'>"+departments[index].DEPARTMENT_NAME+"</option>");
 			}
 		},
 		error : function() {
@@ -19,15 +19,16 @@ var initDepartment = function() {
 initDepartment();
 
 // 填充职位
-var initPosition = function() {
+let initPosition = function() {
 	$.ajax({
 		url : "/" + location.pathname.split("/")[1] + "/position",
 		type : "POST",
 		dataType : "JSON",
 		data : 'Method=INIT',
 		success : function(positions) {
-			var $position=$("#POSITION");
-			for (let position of positions) {
+			let $position=$("#POSITION");
+			for (let index=0;index<positions.length;index++){
+			    let position=positions[index];
 				$position.append("<option value='"+position.POSITION_ID+"'>"+position.POSITION_NAME+"</option>");
 			}
 		},
@@ -35,11 +36,11 @@ var initPosition = function() {
 			console.log("职位加载失败");
 		}
 	});
-}
+};
 initPosition();
 
 // 初始化表单验证插件
-var initbootstrapValidator = function(fm){
+let initbootstrapValidator = function(fm){
 	fm.bootstrapValidator({
 		// 默认的提示消息
 		message: 'This value is not valid',
@@ -79,12 +80,8 @@ var initbootstrapValidator = function(fm){
 					},
 					callback: {
 						message: '必须选择一个部门',
-						callback: function(value, validator) {
-							if (value == 0) {
-								return false;
-							} else {
-								return true;
-							}
+						callback: function(value) {
+							return value !== '0'
 						}
 					}
 				}
@@ -97,12 +94,8 @@ var initbootstrapValidator = function(fm){
 					},
 					callback: {
 						message: '必须选择一个职位',
-						callback: function(value, validator) {
-							if (value == 0) {
-								return false;
-							} else {
-								return true;
-							}
+						callback: function(value) {
+                            return value !== '0'
 						}
 					}
 				}
@@ -138,14 +131,15 @@ var initbootstrapValidator = function(fm){
 	}).on('success.form.bv', function(e) {
 		// 阻止表单提交
 		e.preventDefault();
-		var param=$employeeForm.serialize();
-		if($("#method").val().toUpperCase()=="ADD"){
+		let param=$employeeForm.serialize();
+		let method=$("#method").val();
+		if(method.toUpperCase()==="ADD"){
 			$.ajax({
 				url : "/" + location.pathname.split("/")[1] + "/employee",
 				type : "POST",
 				data : param,
 				success:function(data){
-					if(data=='0'){
+					if(data==='0'){
 						// 清空表体
 						$("#employeeTable>tbody").empty();
 						// 删除页码
@@ -178,14 +172,14 @@ var initbootstrapValidator = function(fm){
 					}
 				}	
 			});
-		}else if($("#method").val().toUpperCase()=="UPDATE"){
+		}else if(method.toUpperCase()==="UPDATE"){
 			if(!$.common.isEmpty(updateEMPNAME)&&!$.common.isEmpty(updateEMPID)){
 				$.ajax({
 					url : "/" + location.pathname.split("/")[1] + "/employee",
 					type : "POST",
 					data : param+"&updateEMPNAME="+updateEMPNAME+"&updateEMPID="+updateEMPID,
 					success:function(data){
-						if(data=='0'){
+						if(data==='0'){
 							// 清空表体
 							$("#employeeTable>tbody").empty();
 							// 删除页码
@@ -225,30 +219,32 @@ var initbootstrapValidator = function(fm){
 			updateEMPID="";
 		}
 	}); 
-}
+};
 initbootstrapValidator($employeeForm);
 
 // 刷新清空表单
 $employeeForm[0].reset();
 
+let updateEMPNAME="";
+let updateEMPID="";
 // 用于添加和修改的页面跳转
-var addAndUpdate=function(hidePageNode,showPageNode,method,btnNode){
+let addAndUpdate=function(hidePageNode,showPageNode,method,btnNode){
 	pageToggle(hidePageNode,showPageNode);
 	$pageList.css("display","none");
-	if(method=="add"){
+	if(method==="add"){
 		$("#passwordBlock").css("display","block");
 		$("#msg").text("添加员工");
 		$("#mysubmit").text("添加");
 		$("#method").val("ADD");
 		// 隐藏input域用于修改页面的任务
 	}
-	if(method=="update"){
+	if(method==="update"){
 		$("#passwordBlock").css("display","none");
 		$("#msg").text("修改员工");
 		$("#mysubmit").text("修改");
 		$("#method").val("UPDATE");
 		// 获取当前按钮 然后根据相对位置获取ID的位置内容
-		var EMPLOYEE_ID=btnNode.parentNode.parentNode.childNodes[0].textContent;
+		let EMPLOYEE_ID=btnNode.parentNode.parentNode.childNodes[0].textContent;
 		// 将ID input框的值回填为获取的ID
 		$("#EMPLOYEE_ID").val(EMPLOYEE_ID);
 		$.ajax({
@@ -257,15 +253,15 @@ var addAndUpdate=function(hidePageNode,showPageNode,method,btnNode){
 			dataType : "JSON",
 			data : 'Method=QE&EMPLOYEE_ID='+EMPLOYEE_ID,
 			success:function(employee){
-				if(employee=='1'){
+				if(employee===1){
 					$.modal.msgError("亲发生错误了哦~");
 					return;
 				}
-				if(employee=='2'){
+				if(employee===2){
 					$.modal.msgError("请输入数字哦~");
 					return;
 				}
-				if(employee=='3'){
+				if(employee===3){
 					$.modal.msgError("没查到用户哦~");
 					return;
 				}
@@ -281,4 +277,4 @@ var addAndUpdate=function(hidePageNode,showPageNode,method,btnNode){
 			}
 		});
 	}
-}
+};

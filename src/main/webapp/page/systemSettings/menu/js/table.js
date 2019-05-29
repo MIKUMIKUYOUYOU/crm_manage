@@ -1,31 +1,32 @@
 //页数跨度（每页的数量）
-var pageSize=5;
+let pageSize=5;
 //总页
-var totalPage=0;
+let totalPage=0;
 //设置当前页数
-var currPage=0;
+let currPage=0;
 //获取一次$employeeForm的jq对象多次引用 加强性能 employeeManage.js依赖于此jq对象
 //此jq对象用于控制表单如添加、修改
-var $menuForm=$("#menuForm");
+let $menuForm=$("#menuForm");
 //分页的div节点
-var $pageList=$("#pageList");
+let $pageList=$("#pageList");
 //查询调教表单jq对象 多次访问此对象 提出提升效率
-var $paramForm=$("#paramForm");
+let $paramForm=$("#paramForm");
 
 // 填充table的方法
-var initMenuTable=function(param,page,pageSize){
+let initMenuTable=function(param,page,pageSize){
 	$.ajax({
 		url : "/" + location.pathname.split("/")[1] + "/menu",
 		type : "POST",
 		dataType : "JSON",
 		data : 'Method=INITPAGE&'+param+"&page="+page+"&pageSize="+pageSize,
 		success : function(menus) {
-			if(menus=='1'){
+			if(menus === 1){
 				$.modal.alertWarning("亲出错了哦");
 				return;
 			}
-			for (let menu of menus) {
-				var $tr=$("<tr data-key='1'></tr>");
+			for (let index=0;index<menus.length;index++){
+				let menu=menus[index];
+				let $tr=$("<tr data-key='1'></tr>");
 				$tr.append("<td>"+menu.MENU_ID+"</td>");
 				$tr.append("<td>"+menu.MENU_NAME+"</td>");
 				$tr.append("<td>"+menu.MENU_URL+"</td>");
@@ -34,8 +35,8 @@ var initMenuTable=function(param,page,pageSize){
 				}else{
 					$tr.append("<td>无图标</td>");
 				}
-				var CREATE_TIME=new Date(menu.CREATE_TIME).format("yyyy-MM-dd hh:mm:ss");
-				var UPDATE_TIME=new Date(menu.UPDATE_TIME).format("yyyy-MM-dd hh:mm:ss");
+				let CREATE_TIME=new Date(menu.CREATE_TIME).format("yyyy-MM-dd hh:mm:ss");
+				let UPDATE_TIME=new Date(menu.UPDATE_TIME).format("yyyy-MM-dd hh:mm:ss");
 				$tr.append("<td>"+CREATE_TIME+"</td>");
 				$tr.append("<td>"+UPDATE_TIME+"</td>");
 				if(typeof(menu.PARENT_NAME) != "undefined"){
@@ -52,7 +53,7 @@ var initMenuTable=function(param,page,pageSize){
 			$.modal.alertError("失败");
 		}
 	});
-}
+};
 
 // 第一次加载-用于初始化table
 initMenuTable($paramForm.serialize(),1,pageSize);
@@ -76,13 +77,13 @@ $("#queryBtn").click(function(){
 });
 
 //用于切换div的方法
-var pageToggle= function(hidePageNode,showPageNode){
+let pageToggle= function(hidePageNode,showPageNode){
 	$(hidePageNode).css("display","none");
 	$(showPageNode).css("display","block");
-}
+};
 
 //请求页数的方法
-var total=function(){
+let total=function(){
 	if(!$.common.isEmpty($("#menuName").val())){
 		$.ajax({
 			url : "/" + location.pathname.split("/")[1] + "/count",
@@ -90,7 +91,7 @@ var total=function(){
 			data : 'Method=MenuPageWK&'+$paramForm.serialize(),
 			async:false,
 			success : function(total) {
-				totalPage=parseInt((parseInt(total) + pageSize -1) / pageSize);
+				totalPage=parseInt(((parseInt(total) + pageSize -1) / pageSize)+"");
 			}
 		});
 	}else{
@@ -100,14 +101,14 @@ var total=function(){
 			data : 'Method=MenuPage',
 			async:false,
 			success : function(total) {
-				totalPage=parseInt((parseInt(total) + pageSize -1) / pageSize);
+				totalPage=parseInt(((parseInt(total) + pageSize -1) / pageSize)+"");
 			}
 		});
 	}
-}
+};
 
 // 用于返回的方法
-var back=function(hidePageNode,showPageNode){
+let back=function(hidePageNode,showPageNode){
 	// 显示页码
 	$pageList.css("display","block");
 	// 切换页面
@@ -117,10 +118,10 @@ var back=function(hidePageNode,showPageNode){
 	$employeeForm.data('bootstrapValidator',null);
 	initbootstrapValidator($employeeForm);
 	$employeeForm[0].reset();*/
-}
+};
 
-var pageList=function(allPage){
-	var if_fistime = true;
+let pageList=function(allPage){
+	let if_fistime = true;
 	$(".pagination").jqPaginator({
 		// 总页数（pageBean）
 		totalPages: allPage,
@@ -143,7 +144,7 @@ var pageList=function(allPage){
 			}
 		}
 	});
-}
+};
 //初始化totalPage
 total();
 //初始化分页 内部自带第一页 因为不带有创建和修改menu的方法 不提供修改当前页的参数

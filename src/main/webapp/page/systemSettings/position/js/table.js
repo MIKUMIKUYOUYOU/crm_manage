@@ -1,42 +1,45 @@
 //页数跨度（每页的数量）
-var pageSize=3;
+let pageSize=3;
 //总页
-var totalPage=0;
+let totalPage=0;
 //设置当前页数
-var currPage=0;
+let currPage=0;
 //form的jq对象 （暂定）
-var $positionFrom=$("#positionFrom");
+let $positionFrom=$("#positionFrom");
 //分页的div节点
-var $pageList=$("#pageList");
+let $pageList=$("#pageList");
 //查询调教表单jq对象 多次访问此对象 提出提升效率
-var $paramForm=$("#paramForm");
+let $paramForm=$("#paramForm");
 
 //填充table的方法
-var initPositionTable=function(param,page,pageSize){
+let initPositionTable=function(param,page,pageSize){
 	$.ajax({
 		url : "/" + location.pathname.split("/")[1] + "/position",
 		type : "POST",
 		dataType : "JSON",
 		data : 'Method=INITPAGE&'+param+"&page="+page+"&pageSize="+pageSize,
 		success : function(positions) {
-			if(positions=='1'){
+			if(positions===1){
 				$.modal.alertWarning("亲出错了哦");
 				return;
 			}
-			for (let position of positions) {
-				var $tr=$("<tr></tr>");
+			//for普通循环效率最快
+			for (let index=0;index<positions.length;index++){
+				let position =positions[index];
+				let $tr=$("<tr></tr>");
 				$tr.append("<td>"+position.POSITION_ID+"</td>");
 				$tr.append("<td>"+position.POSITION_LEVEL+"</td>");
 				$tr.append("<td>"+position.POSITION_NAME+"</td>");
-				var CREATE_TIME=new Date(position.CREATE_TIME).format("yyyy-MM-dd hh:mm:ss");
-				var UPDATE_TIME=new Date(position.UPDATE_TIME).format("yyyy-MM-dd hh:mm:ss");
+				let CREATE_TIME=new Date(position.CREATE_TIME).format("yyyy-MM-dd hh:mm:ss");
+				let UPDATE_TIME=new Date(position.UPDATE_TIME).format("yyyy-MM-dd hh:mm:ss");
 				$tr.append("<td>"+CREATE_TIME+"</td>");
 				$tr.append("<td>"+UPDATE_TIME+"</td>");
-				var $div=$("<div class='col-lg-20'></div>");
-				var $updateBtn=$('<button type="button" id="updateBtn" name="updatebtn" class="btn btn-warning btn-sm" onclick="addAndUpdate(table,addPosition,\'update\',this)">修改</button>');
-				var $linkBtn=$('<button type="button" id="linkbtn" name="linkbtn" class="btn btn-success btn-sm" onclick="showselectmodel(this)">关联菜单</button>');
+				let $div=$("<div class='col-lg-20'></div>");
+				let $updateBtn=$('<button type="button" id="updateBtn" name="updatebtn" class="btn btn-warning btn-sm" onclick="addAndUpdate(table,addPosition,\'update\',this)">修改</button>');
+				let $linkBtn=$('<button type="button" id="linkbtn" name="linkbtn" class="btn btn-success btn-sm" onclick="showselectmodel(this)">关联菜单</button>');
 				$div.append($updateBtn,$linkBtn);
 				$tr.append($("<td></td>").append($div));
+
 				$("#positionTable>tbody").append($tr);
 			}
 			/* $.modal.msgSuccess("加载成功!"); */
@@ -45,7 +48,7 @@ var initPositionTable=function(param,page,pageSize){
 			$.modal.alertError("失败");
 		}
 	});
-}
+};
 
 //第一次加载-用于初始化table
 initPositionTable($paramForm.serialize(),1,pageSize);
@@ -68,12 +71,12 @@ $("#queryBtn").click(function(){
 	}
 });
 
-var pageToggle= function(hidePageNode,showPageNode){
+let pageToggle= function(hidePageNode,showPageNode){
 	$(hidePageNode).css("display","none");
 	$(showPageNode).css("display","block");
-}
+};
 //用于返回的方法
-var back=function(hidePageNode,showPageNode){
+let back=function(hidePageNode,showPageNode){
 	// 显示页码
 	$pageList.css("display","block");
 	// 切换页面
@@ -84,10 +87,10 @@ var back=function(hidePageNode,showPageNode){
 	initbootstrapValidator($positionFrom);
 	$positionFrom[0].reset();
 	
-}
+};
 
 //请求页数的方法
-var total=function(){
+let total=function(){
 	if(!$.common.isEmpty($("#positionname").val())){
 		$.ajax({
 			url : "/" + location.pathname.split("/")[1] + "/count",
@@ -95,7 +98,7 @@ var total=function(){
 			data : 'Method=PosPageWK&'+$paramForm.serialize(),
 			async:false,
 			success : function(total) {
-				totalPage=parseInt((parseInt(total) + pageSize -1) / pageSize);
+				totalPage=parseInt(((parseInt(total) + pageSize -1) / pageSize)+"");
 			}
 		});
 	}else{
@@ -105,16 +108,16 @@ var total=function(){
 			data : 'Method=PosPage',
 			async:false,
 			success : function(total) {
-				totalPage=parseInt((parseInt(total) + pageSize -1) / pageSize);
+				totalPage=parseInt(((parseInt(total) + pageSize -1) / pageSize)+"");
 			}
 		});
 	}
-}
+};
 
 
 //分页方法
-var pageList=function(allPage,currpage){
-	var if_fistime = true;
+let pageList=function(allPage,currpage){
+	let if_fistime = true;
 	$(".pagination").jqPaginator({
 		// 总页数（pageBean）
 		totalPages: allPage,
@@ -137,7 +140,7 @@ var pageList=function(allPage,currpage){
 			}
 		}
 	});
-}
+};
 //调用请求页数 初始化totalPage
 total();
 //调用分页方法 默认第一页
